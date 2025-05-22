@@ -6,7 +6,6 @@ import (
 	"net/http"
 	"template/database"
 	"template/store"
-	"time"
 
 	"golang.org/x/crypto/bcrypt"
 )
@@ -24,8 +23,6 @@ func AdminCount(w http.ResponseWriter, r *http.Request) {
 }
 
 func CreateAdmin(w http.ResponseWriter, r *http.Request) {
-	time.Sleep(3 * time.Second)
-
 	type request struct {
 		Name     string `json:"name"`
 		Email    string `json:"email"`
